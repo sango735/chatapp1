@@ -8,6 +8,10 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+  def destroy
+    current_user.destroy
+    redirect_to root_path
+  end
 
   private
   def user_params
